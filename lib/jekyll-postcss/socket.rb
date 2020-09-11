@@ -58,8 +58,6 @@ module PostCss
       while @postcss.nil?
         begin
           @postcss = TCPSocket.open("localhost", 8124)
-        rescue StandardError
-          nil # Suppressing exceptions
         end
       end
     end
